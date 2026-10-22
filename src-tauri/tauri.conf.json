@@ -29,7 +29,7 @@
   "bundle": {
     "active": true,
     "targets": ["deb", "rpm", "appimage", "nsis"],
-    "category": "Network",
+    "category": "Utility",
     "shortDescription": "Minimal WireGuard VPN client",
     "license": "MIT",
     "externalBin": ["binaries/burrow-helper"],
