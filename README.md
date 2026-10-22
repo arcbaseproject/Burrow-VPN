@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo-text.png" alt="Burrow logo" width="128">
+  <img src="logo.png" alt="Burrow logo" width="128">
 </p>
 
 <h1 align="center">Burrow</h1>
