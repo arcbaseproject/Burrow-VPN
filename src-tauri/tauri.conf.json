@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Burrow",
+  "version": "0.1.0",
+  "identifier": "app.burrow.vpn",
+  "build": {
+    "beforeDevCommand": "node scripts/build-helper.mjs && npm run dev",
+    "beforeBuildCommand": "node scripts/build-helper.mjs && npm run build",
+    "devUrl": "http://localhost:1420",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Burrow",
+        "width": 360,
+        "height": 640,
+        "resizable": false,
+        "maximizable": false,
+        "visible": false,
+        "backgroundColor": "#0b0d10"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb", "rpm", "appimage", "nsis"],
+    "category": "Network",
+    "shortDescription": "Minimal WireGuard VPN client",
+    "license": "MIT",
+    "externalBin": ["binaries/burrow-helper"],
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.ico", "icons/icon.png"],
+    "linux": {
+      "deb": {
+        "depends": ["iproute2", "pkexec | policykit-1", "iptables"],
+        "recommends": ["openresolv | systemd-resolved"],
+        "files": { "/usr/share/polkit-1/actions/app.burrow.helper.policy": "../packaging/linux/app.burrow.helper.policy" }
+      },
+      "rpm": {
+        "depends": ["iproute", "polkit", "iptables"],
+        "files": { "/usr/share/polkit-1/actions/app.burrow.helper.policy": "../packaging/linux/app.burrow.helper.policy" }
+      }
+    },
+    "windows": {
+      "nsis": { "installMode": "perMachine" }
+    }
+  }
+}

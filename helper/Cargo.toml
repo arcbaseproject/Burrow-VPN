@@ -1,0 +1,17 @@
+[package]
+name = "burrow-helper"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Privileged tunnel helper for Burrow VPN"
+
+[lib]
+name = "burrow_helper"
+path = "src/lib.rs"
+
+[[bin]]
+name = "burrow-helper"
+path = "src/main.rs"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+defguard_wireguard_rs = { version = "0.12", default-features = false }

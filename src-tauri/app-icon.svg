@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="badge"><circle cx="256" cy="256" r="244"/></clipPath>
+  </defs>
+  <g clip-path="url(#badge)">
+    <rect width="512" height="512" fill="#2e5e4e"/>
+    <!-- back half of the hole -->
+    <ellipse cx="256" cy="380" rx="124" ry="32" fill="#0d100e"/>
+    <!-- ears -->
+    <circle cx="186" cy="168" r="24" fill="#a86f38"/>
+    <circle cx="326" cy="168" r="24" fill="#a86f38"/>
+    <circle cx="186" cy="168" r="11" fill="#e8c99a"/>
+    <circle cx="326" cy="168" r="11" fill="#e8c99a"/>
+    <!-- body rising out of the hole -->
+    <path d="M168 430 V292 C168 250 206 236 256 236 C306 236 344 250 344 292 V430 Z" fill="#c98b4b"/>
+    <ellipse cx="256" cy="338" rx="52" ry="58" fill="#e0b680"/>
+    <!-- head -->
+    <ellipse cx="256" cy="226" rx="96" ry="86" fill="#c98b4b"/>
+    <ellipse cx="256" cy="262" rx="52" ry="38" fill="#e8c99a"/>
+    <!-- eyes -->
+    <circle cx="219" cy="214" r="12" fill="#1a201d"/>
+    <circle cx="293" cy="214" r="12" fill="#1a201d"/>
+    <circle cx="223" cy="209" r="4" fill="#ffffff"/>
+    <circle cx="297" cy="209" r="4" fill="#ffffff"/>
+    <!-- nose and teeth -->
+    <ellipse cx="256" cy="246" rx="15" ry="10" fill="#3a2616"/>
+    <rect x="245" y="272" width="10" height="20" rx="3" fill="#ffffff"/>
+    <rect x="257" y="272" width="10" height="20" rx="3" fill="#ffffff"/>
+    <!-- ground in front: its top edge is the near rim of the hole -->
+    <path d="M0 380 H132 A124 32 0 0 0 380 380 H512 V512 H0 Z" fill="#1a201d"/>
+    <!-- paws on the rim -->
+    <ellipse cx="208" cy="384" rx="24" ry="13" fill="#a86f38"/>
+    <ellipse cx="304" cy="384" rx="24" ry="13" fill="#a86f38"/>
+  </g>
+</svg>
